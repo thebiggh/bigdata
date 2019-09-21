@@ -36,3 +36,4 @@ This lab will create an **Azure Databricks Workspace** that can be used for batc
 * Reduce the Data Frame to an aggregated value
 * Visualise the data by selecting a graphing option
 
+**Now ready for [Lab3](../lab3/lab23.md)**

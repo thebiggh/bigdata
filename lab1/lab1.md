@@ -7,9 +7,13 @@ The goals for this session are to understand data storage options available to u
 * Create a resource group for labs (e.g. rg-bigdata-[name])
 * Create an Azure Storage Account (e.g. stgbigdata[name])
 
-**TODO: Put some images here**
+![](create_resource_group.png)
+![](create_storage_account.png)
+![](create_storage_account_details.png)
 
 * Make sure the storage account is configured for HTTPS only and a Hierarchical Namespace filesystem (i.e. Data Lake Gen2 Storage).
+
+![](hierarchical_namespace.png)
 
 ## Task 2: Download and configure Azure Storage Explorer
 
@@ -73,7 +77,10 @@ The goals for this session are to understand data storage options available to u
 
 * View the **Monitor** page in Azure Data Factory
 * Verify the pipeline has fully executed and was successful
+
+![](adf_monitor_success.png)
+
 * Open Azure Storage Explorer and browse to output location
 * Verify the file has been created
 
-**Now ready for Lab2**
+**Now ready for [Lab2](../lab2/lab2.md)**

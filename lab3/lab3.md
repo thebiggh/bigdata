@@ -50,3 +50,4 @@ sdf = sdf.select(sdf.window.start.alias('timestamp'), sdf.keyword, sdf.sentiment
 sdf.writeStream.format('delta').outputMode('append').option('checkpointLocation', '///sentiment_hourly_checkpoint').table('sentiment_hourly')
 ```
 
+**Now ready for [Lab4](../lab4/lab4.md)**
