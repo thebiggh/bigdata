@@ -47,7 +47,14 @@ sdf = sdf.select(sdf.window.start.alias('timestamp'), sdf.keyword, sdf.sentiment
 ## Task 4: Write data stream to Databricks Delta Table
 
 ```python
-sdf.writeStream.format('delta').outputMode('append').option('checkpointLocation', '///sentiment_hourly_checkpoint').table('sentiment_hourly')
+def writeDataFrame(batch, id):
+  batch.persist()
+  batch.write.format('delta').mode('append').save('/FileStore/tables/sentiment')
+  batch.unpersist()
+
+sdf.writeStream.option('checkpointLocation', '///sentiment').foreachBatch(writeDataFrame).start()
 ```
+
+## Task 5: Confirm data is written to the Delta Table
 
 **Now ready for [Lab4](../lab4/lab4.md)**

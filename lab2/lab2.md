@@ -7,7 +7,7 @@ This lab will create an **Azure Databricks Workspace** that can be used for batc
 **TODO: need setup screenshot**
 
 * Login to Azure Portal
-* Browse to resource group from Lab 1
+* Browse to resource group from Lab 1 (rg-bigdata-{name})
 * Create a new Databricks service. Ensure Notebooks are available.
 
 **Screenshot**
@@ -29,6 +29,8 @@ This lab will create an **Azure Databricks Workspace** that can be used for batc
 
 ## Task 3: Perform some calculations on the data
 
+[Spark SQL Programming Guide](https://spark.apache.org/docs/2.4.0/sql-programming-guide.html)
+
 * Load a reference file from the Data Lake
 * Create a query to join data with the reference data
 * Select the columns to display
@@ -36,4 +38,4 @@ This lab will create an **Azure Databricks Workspace** that can be used for batc
 * Reduce the Data Frame to an aggregated value
 * Visualise the data by selecting a graphing option
 
-**Now ready for [Lab3](../lab3/lab23.md)**
+**Now ready for [Lab3](../lab3/lab3.md)**
