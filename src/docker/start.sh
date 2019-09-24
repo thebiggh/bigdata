@@ -1,0 +1,2 @@
+#!/bin/bash
+SPARK_DIST_CLASSPATH=$(hadoop classpath):${HADOOP_HOME}/share/hadoop/tools/lib/* pyspark --conf spark.executor.pyspark.memory=2g --conf spark.driver.memory=2g --conf spark.executor.memory=2g --packages com.microsoft.azure:azure-eventhubs-spark_2.11:2.3.10,com.microsoft.azure:azure-sqldb-spark:1.0.2,org.mongodb.spark:mongo-spark-connector_2.11:2.3.1
