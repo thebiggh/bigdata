@@ -5,3 +5,4 @@ packages/
 *.csproj.user
 .vs/
 ~$*.pptx
+setup_scripts/
