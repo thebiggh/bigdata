@@ -6,7 +6,7 @@ This lab will process data from a streaming source
 
 ## Task 1: Read streaming data from Azure Event Hub
 
-### Configure Azure Event Hub
+* Configure Azure Event Hub
 ```python
 import json
 
@@ -20,7 +20,7 @@ conf['eventhubs.startingPosition'] = json.dumps({
 })
 ```
 
-### Read streaming data
+* Read streaming data
 ```python
 sdf = spark.readStream.format('eventhubs').options(**conf).load()
 sdf = sdf.withColumn('body', sdf.body.cast('string'))
@@ -56,5 +56,14 @@ sdf.writeStream.option('checkpointLocation', '///sentiment').foreachBatch(writeD
 ```
 
 ## Task 5: Confirm data is written to the Delta Table
+
+* Log into the Databricks portal and click the Data icon
+
+![](databricks_data.png)
+
+* There should be a table created in this list
+* Click the table and this should show the schema and preview data.
+
+![](databricks_table_preview.png)
 
 **Now ready for [Lab4](../lab4/lab4.md)**

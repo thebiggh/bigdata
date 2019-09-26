@@ -105,3 +105,14 @@ GROUP BY `iothub-connection-device-id`
 * Visualise the data by selecting a graphing option
 
 **Now ready for [Lab3](../lab3/lab3.md)**
+
+## Stretch Goal
+
+### Add Databricks to Azure Data Factory Pipeline
+When Azure Data Factory imports data to the Data Lake Gen2 storage account an additional step can be added to the pipeline to transform the data and save to other data sources.
+
+* Update the Data Factory pipeline to include a **Databricks Notebook** activity
+* Setup the Linked Service and parameters to connect to Databricks
+* Look ahead to [Lab 4](../lab4/lab4.md) for access token steps
+* Run the pipeline 
+* Open the monitor view and confirm that Databricks executes the notebook
