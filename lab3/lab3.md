@@ -55,7 +55,14 @@ def writeDataFrame(batch, id):
 sdf.writeStream.option('checkpointLocation', '///sentiment').foreachBatch(writeDataFrame).start()
 ```
 
-## Task 5: Confirm data is written to the Delta Table
+## Task 5: Create table metadata
+
+```python
+%sql
+CREATE TABLE sentiment_hourly USING DELTA LOCATION '/FileStore/tables/sentiment'
+```
+
+## Task 6: Confirm data is written to the Delta Table
 
 * Log into the Databricks portal and click the Data icon
 
@@ -67,3 +74,8 @@ sdf.writeStream.option('checkpointLocation', '///sentiment').foreachBatch(writeD
 ![](databricks_table_preview.png)
 
 **Now ready for [Lab4](../lab4/lab4.md)**
+
+## Stretch Goal
+
+### Save data to CosmosDB
+Create a CosmosDB resource in Azure and 
