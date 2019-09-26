@@ -78,4 +78,14 @@ CREATE TABLE sentiment_hourly USING DELTA LOCATION '/FileStore/tables/sentiment'
 ## Stretch Goal
 
 ### Save data to CosmosDB
-Create a CosmosDB resource in Azure and 
+Create a CosmosDB resource in Azure and use the MongoDB protocol. Once this is created find the connection string and update the `def writeDataFrame(batch, id):` method to:
+
+```python
+connection_string = '<cosmos db mongo connection string>'
+
+def writeDataFrame(batch, id):
+  batch.persist()
+  batch.write.format('com.mongodb.spark.sql.DefaultSource').mode('append').option('database', 'twitter').option('collection', 'sentiment').option('uri', connection_string).save()
+  batch.write.format('delta').mode('append').save('/FileStore/tables/sentiment')
+  batch.unpersist()
+```
