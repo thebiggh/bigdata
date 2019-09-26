@@ -26,6 +26,16 @@
 
 * Spark
 
+First we need to get the URL to the data tables in Spark. This is constructed from the cluster details.
+
+![](databricks_cluster_settings.png)
+
+The URL should be **https://** followed by the **Server Hostname** field from the **Advanced Options** and the **Port**. After this, you need the **HTTP Path** for the unique cluster name.
+
+E.g. `https://westeurope.azuredatabricks.net:443/sql/protocolv1/o/<org id>/<cluster id>`
+
+Next make sure the ODBC driver downloaded earlier is installed and then complete the Power BI wizard as follows:
+
 ![](power_bi_get_data_spark.png)
 ![](power_bi_spark_connection.png)
 ![](power_bi_spark_authentication.png)
