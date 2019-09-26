@@ -46,6 +46,7 @@ org.mongodb.spark:mongo-spark-connector_2.11:2.3.1
 account = '<datalake account name>'
 key = '<datalake account key>'
 file_system = 'iot'
+spark.conf.set('fs.azure.account.key.%s.blob.core.windows.net' % account, key)
 ```
 
 * Load the data source **this will have been imported as part of [Lab 1](../lab1/lab1.md)**
