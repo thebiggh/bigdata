@@ -9,6 +9,7 @@ RUN apt update \
  && pip3 install -q jupyter \
  && pip3 install -q pandas \
  && pip3 install -q scikit-learn \
+ && pip3 install -q matplotlib \
  && pip3 install -q sql_magic
 
  RUN curl -o ${SPARK_VERSION}.tgz https://www-eu.apache.org/dist/spark/${SPARK_VERSION}/${SPARK_FILE}.tgz \
