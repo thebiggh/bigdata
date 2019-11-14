@@ -8,6 +8,7 @@ RUN apt update \
  && apt install -y -qq curl openjdk-8-jdk-headless python3 python3-pip \
  && pip3 install -q jupyter \
  && pip3 install -q pandas \
+ && pip3 install -q scikit-learn \
  && pip3 install -q sql_magic
 
  RUN curl -o ${SPARK_VERSION}.tgz https://www-eu.apache.org/dist/spark/${SPARK_VERSION}/${SPARK_FILE}.tgz \
