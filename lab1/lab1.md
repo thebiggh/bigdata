@@ -73,7 +73,7 @@ The goals for this session are to understand data storage options available to u
 * Validate the information that is shown
 * Click **Finish** at the bottom of the panel
 
-## Task 5: Verify the file as been copied
+## Task 5: Verify the file has been copied
 
 * View the **Monitor** page in Azure Data Factory
 * Verify the pipeline has fully executed and was successful
